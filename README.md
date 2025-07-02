@@ -1,7 +1,7 @@
-# USFQ Thesis Template
+# Unofficial USFQ Thesis Template
 
-This is a LaTeX template for the capstone project at Universidad
-San Francisco de Quito. It uses LuaLaTeX and supports
+This is an unofficial LaTeX template for the capstone project at
+Universidad San Francisco de Quito. It uses LuaLaTeX and supports
 [unicode-math][1]. By default, the template will use the [TeX
 Gyre Termes][3] font for normal and math text, and [JuliaMono][4]
 for monospaced text. TeX Gyre Termes is a Times New Roman clone.
