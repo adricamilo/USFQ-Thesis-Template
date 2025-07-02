@@ -45,7 +45,7 @@ use Overleaf, you should upload everything except:
 - README.md
 - latexmkrc
 
-Make sure you select LuaLaTeX as the compiler.
+And make sure you select LuaLaTeX as the compiler.
 
 [1]: https://ctan.org/pkg/unicode-math
 [2]: https://github.com/matze/mtheme
