@@ -1,0 +1,78 @@
+\ProvidesPackage{packages}
+
+\newif\if@loadbib\@loadbibtrue  % Default is to load biblatex
+\DeclareOption{nobib}{\@loadbibfalse}
+\ProcessOptions\relax
+
+\usepackage{polyglossia}
+\gappto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+\usepackage{csquotes}
+
+\usepackage[svgnames]{xcolor}
+\usepackage{microtype}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{setspace}
+
+\usepackage{comment}
+\usepackage{lipsum}
+\usepackage{blindtext}
+
+\usepackage{mathtools}
+\usepackage{xparse}
+
+% xparse code for nice set notation. This needs mathtools
+\DeclarePairedDelimiterX{\set}[1]{\{}{\}}{\setargs{#1}}
+\NewDocumentCommand{\setargs}{>{\SplitArgument{1}{;}}m}
+{\setargsaux#1}
+\NewDocumentCommand{\setargsaux}{mm}
+{\IfNoValueTF{#2}{#1} {#1\nonscript\:\delimsize\vert\allowbreak\nonscript\:\mathopen{}#2}}%
+
+\def\Set{\set*}%
+% end of xparse code
+
+% xparse code for nice angle bracket notation. This needs mathtools
+\DeclarePairedDelimiterX{\angleset}[1]{\langle}{\rangle}{\anglesetargs{#1}}
+\NewDocumentCommand{\anglesetargs}{>{\SplitArgument{1}{;}}m}
+{\anglesetargsaux#1}
+\NewDocumentCommand{\anglesetargsaux}{mm}
+{\IfNoValueTF{#2}{#1}{#1\nonscript\:\delimsize\vert\allowbreak\nonscript\:\mathopen{}#2}}%
+
+\def\AngleSet{\angleset*}%
+% end of xparse code
+
+\let\olddiv\div
+\usepackage{physics}
+\usepackage{nicefrac}
+\usepackage{tcolorbox}
+
+\usepackage{amsmath}
+
+\usepackage{unicode-math}
+\setmainfont{TeXGyreTermes} % This is a Times New Roman clone which works better for LaTeX
+\setmathfont{TeXGyreTermesMath}
+\setmonofont[Scale=MatchUppercase]{JuliaMono} % This mono font has full Unicode support
+\setmathrm{TeXGyreTermes}
+\setoperatorfont\mathrm
+
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{pdfpages}
+
+\usepackage{fancyhdr}
+
+\if@loadbib
+    \usepackage[backend=biber,
+                style=numeric-comp,
+                sorting=nty,
+                ]{biblatex}
+
+    \DeclareFieldFormat{urldate}{%
+      \mkbibparens{\bibstring{urlseen}\space%
+      \thefield{urlyear}\hyphen%
+      \ifnum\thefield{urlmonth}<10 0\fi\thefield{urlmonth}\hyphen%
+      \ifnum\thefield{urlday}<10 0\fi\thefield{urlday}}\isdot}
+\fi
+
+\usepackage[hidelinks]{hyperref}
+

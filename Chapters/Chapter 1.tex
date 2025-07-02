@@ -1,0 +1,82 @@
+\chapter{Turing machines}
+
+\epigraph{\itshape\myopeningquote Although axiomatizability and
+    completeness implies decidability, incompleteness does not
+    imply undecidability.\myclosingquote}
+{Richard Zach \cite{Zach2021}}
+
+\section{Machinery}
+
+\subsection{Formal definition}
+
+\begin{defn}
+    A \textbf{Turing machine} $Z$ consists of:
+    \begin{enumerate}
+        \item A finite set of symbols $\qty{S_0, S_1,\dotsc,
+            S_m}$ called the \textit{alphabet of $Z$}, where
+            $S_0$ is a special symbol we will call
+            \textit{blank}.
+        \item  Some other stuff.
+    \end{enumerate}
+\end{defn}
+
+\begin{defn} \label{def:basic_move}
+    If $Z$ is a Turing machine, and $\alpha$ and $\beta$ are two
+    instantaneous descriptions of $Z$, then we write the
+    \textbf{basic move}
+    \begin{equation*}
+        \alpha \to \beta\quad (Z),
+    \end{equation*}
+    or simply $\alpha \to \beta$ when there is no ambiguity, to
+    mean...
+\end{defn}
+
+\subsection{Some consequences}
+
+From our definition of a basic move, and our requirement that all
+the quadruples of a Turing machine have different combinations of
+the first two symbols, we immediately get 
+
+\begin{theorem} \label{thm:unique_move}
+    Let $Z$ be a Turing machine. For any instantaneous
+    description $\alpha$ of $Z$, there is at most one
+    instantaneous description $\beta$ of $Z$ such that there is a
+    basic move $\alpha \to \beta$.
+\end{theorem}
+
+\begin{theorem}
+    If
+    \begin{equation*}
+        \alpha \to \beta\quad (Z) \qand \alpha \to \gamma\quad
+        (Z),
+    \end{equation*}
+    then $\beta = \gamma$.
+\end{theorem}
+
+\subsection{More stuff}
+
+\begin{theorem}
+    If $M$ is a finite sequence of symbols, and $\mathcal{M}$ is
+    a finite sequence of finite sequences of symbols, then their
+    Gödel numbers are different.
+\end{theorem}
+
+\begin{proof}
+    If $M$ is a finite sequence of symbols, then we can write
+    \begin{equation*}
+        \gn(M)=2^n m,
+    \end{equation*}
+    where $n$ and $m$ are odd integers. If $\mathcal{M}$ is a
+    finite sequence of finite sequences of symbols, then its
+    Gödel number has the form
+    \begin{equation*}
+        2^{n'}m',
+    \end{equation*}
+    where $n'$ is an even integer (because it itself is the Gödel
+    number of a finite sequence of symbols), and $m'$ is an odd
+    integer. By the Fundamental Theorem of Arithmetic, the Gödel
+    numbers of $M$ and $\mathcal{M}$ are different.
+\end{proof}
+
+In the next chapter, we will see some other stuff.
+
