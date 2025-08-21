@@ -1,51 +1,54 @@
-# Unofficial USFQ Thesis Template
+# Plantilla No Oficial para Tesis USFQ
 
-This is an unofficial LaTeX template for the capstone project at
-Universidad San Francisco de Quito. It uses LuaLaTeX and supports
-[unicode-math][1]. By default, the template will use the [TeX
-Gyre Termes][3] font for normal and math text, and [JuliaMono][4]
-for monospaced text. TeX Gyre Termes is a Times New Roman clone.
-I used it because it supports writing math and it just looks so
-much better than Times. Also, it supports unicode-math, which
-everyone should be using anyway.
+Esta es una plantilla LaTeX no oficial para el proyecto de titulación de la
+Universidad San Francisco de Quito. Utiliza LuaLaTeX y es compatible con [unicode-math][1]. Por defecto, la plantilla usa la fuente [TeX
+Gyre Termes][3] para el texto normal y fórmulas, y [JuliaMono][4]
+para el texto monoespaciado. TeX Gyre Termes es un clon de Times New Roman que utilizo porque es compatible nativamente con escritura matemática y porque se ve mucho mejor que Times. Además, permite utilizar unicode-math, que todos deberíamos estar usando de cualquier manera.
 
-For bibliography, I recommend using [JabRef][6], which is
-open-source and quite complete. For compilation, I suggest using
-[latexmk][8], for which I provide a latexmkrc file.
+Para la bibliografía, recomiendo usar [JabRef][6], que es
+de código abierto y bastante completo. Para compilar, sugiero usar
+[latexmk][8], para el cual proporciono un archivo latexmkrc.
 
-Last time I checked the template met the Biblioteca requirements
-was for the **202410 semester**. I will try to keep it up to
-date. Still, you should always double check the requirements
-[here][5].
+La última vez que revisé que la plantilla cumplía con los requisitos de
+la Biblioteca fue en el **semestre 202410**. Intentaré mantenerla
+actualizada. Aun así, siempre deberías verificar los requisitos
+[aquí][5].
 
-I will eventually add my tweaked [Metropolis][2] beamer template.
+Eventualmente agregaré mi versión modificada de la plantilla beamer
+[Metropolis][2] que utilicé para mi presentación.
 
-Thanks to Pablo Padilla Ortiz[^pablo] for providing the original
-version of this template.
+Gracias a Pablo Padilla Ortiz[^pablo] por proporcionar la versión
+original de esta plantilla.
 
-This template was successfully used to typeset my [Math undergrad
-thesis][7] in December 2024 at USFQ. If more people use it, I can
-add a little list here. Please share it with others!
+Esta plantilla fue usada exitosamente para componer mi [tesis de
+pregrado en Matemáticas][7] en diciembre de 2024 en la USFQ. Si más
+personas la usan, puedo agregar una pequeña lista aquí. ¡Por favor
+compártela con otros!
 
-## Getting it to compile
+## Cómo compilar el documento
 
-I recommend using TeX Live. Once you have it installed, clone the
-repo. Inside the repo, the following command should compile the
-document:
+### Usando TeX Live (o similares)
+
+Una vez que tengas instalado TeX Live, clona el repositorio. Dentro del repositorio, el siguiente comando debería compilar el documento:
 
 ```
 latexmk main.tex
 ```
 
-Make sure you have the JuliaMono font installed. If you want to
-use Overleaf, you should upload everything except:
+**Asegúrate de tener la fuente JuliaMono instalada, o en su defecto [sigue estas instrucciones][10].**
+
+### Usando Overleaf
+
+**NOTA:** *Yo recomiendo trabajar en la tesis localmente con git para el manejo de versiones porque una tesis implica escribir y reescribir el documento varias veces. Herramientas en línea como Overleaf no tienen un buen manejo de versiones y pueden fracasar al compilar documentos grandes como una tesis. Por lo tanto, les recomiento usar una distribución de TeX como [TeX Live][9] localmente.*
+
+Si quieres usar Overleaf, sube todos los archivos excepto:
 
 - .gitignore
 - LICENSE
 - README.md
 - latexmkrc
 
-And make sure you select LuaLaTeX as the compiler.
+Además, asegúrate de seleccionar LuaLaTeX como compilador en el menú desplegable de la izquierda en el documento. Overleaf puede no ser compatible con la fuente JuliaMono. Si te sale un error, [sigue estas instrucciones][10].
 
 [1]: https://ctan.org/pkg/unicode-math
 [2]: https://github.com/matze/mtheme
@@ -55,7 +58,8 @@ And make sure you select LuaLaTeX as the compiler.
 [6]: https://www.jabref.org/
 [7]: http://repositorio.usfq.edu.ec/handle/23000/14173
 [8]: https://ctan.org/pkg/latexmk/
+[9]: https://tug.org/texlive/
+[10]: https://github.com/adricamilo/USFQ-Thesis-Template/wiki/Desactivar-JuliaMono
 
-[^pablo]: You may know him as a rather successful math memes
-    creator.
-
+[^pablo]: Puede que lo conozcas como un creador bastante exitoso
+    de memes de matemáticas en Instagram.
