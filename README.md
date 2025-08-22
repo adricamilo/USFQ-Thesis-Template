@@ -45,7 +45,7 @@ Si quieres usar Overleaf, sube todos los archivos excepto:
 - README.md
 - latexmkrc
 
-Además, asegúrate de seleccionar LuaLaTeX como compilador en el menú desplegable de la izquierda en el documento. Overleaf puede no ser compatible con la fuente JuliaMono. Si te sale un error, [sigue estas instrucciones][10].
+Además, asegúrate de seleccionar LuaLaTeX en el documento como compilador utilizando el menú desplegable de la esquina superior izquierda. Overleaf puede no ser compatible con la fuente JuliaMono. Si te sale un error, [sigue estas instrucciones][10].
 
 [1]: https://ctan.org/pkg/unicode-math
 [2]: https://github.com/matze/mtheme
