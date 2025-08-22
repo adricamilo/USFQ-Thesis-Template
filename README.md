@@ -36,7 +36,7 @@ latexmk main.tex
 
 ### Usando Overleaf
 
-> **NOTA:** Yo recomiendo trabajar la tesis localmente, con git para el manejo de versiones, porque una tesis implica escribir y reescribir el documento varias veces. Herramientas en línea como Overleaf no tienen un buen manejo de versiones y pueden fracasar al compilar documentos grandes como una tesis. Por lo tanto, les recomiento usar una distribución de TeX como [TeX Live][9] localmente.
+> **NOTA:** Yo recomiendo trabajar la tesis localmente, con git para el manejo de versiones, porque una tesis implica escribir y reescribir el documento varias veces. Herramientas en línea como Overleaf no tienen un buen manejo de versiones y pueden fracasar al compilar documentos grandes como una tesis. Por lo tanto, les recomiento usar una distribución de TeX como [TeX Live][9].
 
 Si quieres usar Overleaf, sube todos los archivos excepto:
 
